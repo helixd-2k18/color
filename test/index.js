@@ -457,7 +457,7 @@ it('Capping values', function () {
 		h: 100,
 		s: 50,
 		l: 80
-	}).lighten(0.5).lightness(), 100);
+	}).lighten(0.5).lightness(), 90);
 	equal(Color({
 		h: -400,
 		s: 50,
@@ -474,7 +474,7 @@ it('Capping values', function () {
 		h: 100,
 		c: 50,
 		g: 80
-	}).tintify(0.5).gray(), 100);
+	}).tintify(0.5).gray(), 90);
 	equal(Color({
 		h: -400,
 		c: 50,
@@ -491,7 +491,7 @@ it('Capping values', function () {
 		h: 100,
 		w: 50,
 		b: 80
-	}).blacken(0.5).wblack(), 100);
+	}).blacken(0.5).wblack(), 90);
 	equal(Color({
 		h: -400,
 		w: 50,
@@ -592,7 +592,7 @@ it('Manipulators wo/ mix', function () {
 		h: 100,
 		s: 50,
 		l: 60
-	}).lighten(0.5).lightness(), 90);
+	}).lighten(0.5).lightness(), 80);
 	equal(Color({
 		h: 100,
 		s: 50,
@@ -602,7 +602,7 @@ it('Manipulators wo/ mix', function () {
 		h: 100,
 		c: 50,
 		g: 60
-	}).tintify(0.5).gray(), 90);
+	}).tintify(0.5).gray(), 80);
 	equal(Color({
 		h: 100,
 		c: 50,
@@ -617,12 +617,12 @@ it('Manipulators wo/ mix', function () {
 		h: 100,
 		w: 50,
 		b: 60
-	}).blacken(0.5).wblack(), 90);
+	}).blacken(0.5).wblack(), 80);
 	equal(Color({
 		h: 100,
 		s: 40,
 		l: 50
-	}).saturate(0.5).saturationl(), 60);
+	}).saturate(0.5).saturationl(), 70);
 	equal(Color({
 		h: 100,
 		s: 80,

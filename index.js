@@ -306,7 +306,7 @@ Color.prototype = {
 	// used for light themes, but it doesn't change 'hue' and 'chroma' value
 	tintify: function (ratio) {
 		var hcg = this.hcg();
-		hcg.color[2] += hcg.color[2] * ratio;
+		hcg.color[2] += (100 - hcg.color[2]) * ratio;
 		return hcg;
 	},
 
@@ -326,7 +326,7 @@ Color.prototype = {
 
 	lighten: function (ratio) {
 		var hsl = this.hsl();
-		hsl.color[2] += hsl.color[2] * ratio;
+		hsl.color[2] += (100 - hsl.color[2]) * ratio;
 		return hsl;
 	},
 
@@ -338,7 +338,7 @@ Color.prototype = {
 
 	saturate: function (ratio) {
 		var hsl = this.hsl();
-		hsl.color[1] += hsl.color[1] * ratio;
+		hsl.color[1] += (100 - hsl.color[1]) * ratio;
 		return hsl;
 	},
 
@@ -350,13 +350,13 @@ Color.prototype = {
 
 	whiten: function (ratio) {
 		var hwb = this.hwb();
-		hwb.color[1] += hwb.color[1] * ratio;
+		hwb.color[1] += (100 - hwb.color[1]) * ratio;
 		return hwb;
 	},
 
 	blacken: function (ratio) {
 		var hwb = this.hwb();
-		hwb.color[2] += hwb.color[2] * ratio;
+		hwb.color[2] += (100 - hwb.color[2]) * ratio;
 		return hwb;
 	},
 
@@ -372,7 +372,7 @@ Color.prototype = {
 	},
 
 	opaquer: function (ratio) {
-		return this.alpha(this.valpha + (this.valpha * ratio));
+		return this.alpha(this.valpha + ((1 - this.valpha) * ratio));
 	},
 
 	rotate: function (degrees) {
